@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+h1{
+    font-size: 30px;
+    margin: 20px 0px;
+    font-family: Verdana;
+    text-align: center;
+}
+.container{
+    max-width: 1000px;
+    height: max-content;
+    margin: 0px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.box{
+    margin-bottom: 1rem;
+    width: 32%;
+    aspect-ratio: 1/1;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    filter: grayscale(100%);
+    box-shadow: 0px 0px 0px black;
+    transition: 1s;
+}
+.box figcaption{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+    color: white;
+    font-size: 3vw;
+    opacity: 0%;
+    transition: 1s;
+}
+.box img{
+    width: 100%;
+    object-fit: cover;
+}
+.box:hover{
+    filter: grayscale(0%);
+    scale: 1.02;
+    box-shadow: 0px 0px 10px black;
+}
+.box:hover figcaption{
+    opacity: 100%;
+}
